@@ -22,11 +22,27 @@
         text-align: center;
         font-size: 18px;
       }
+      form {
+        margin: auto;
+      }
+      form input {
+        width: 200px;
+      }
     </style>
   </head>
   <body>
     <%-include('partials/nav');%>
     <h1>Contact Us</h1>
     <p>contact us for the coolest cats</p>
+
+    <form id="form-data" method="post" action="/contact">
+      <label for="who">Who do you want to contact?</label>
+      <input type="text" name="who" value="<%=qs.name %>" />
+      <label for="department">Enter Department</label>
+      <input type="text" name="department" value="<%=qs.job %>" />
+      <label for="email">Email:</label>
+      <input type="email" name="email" />
+      <input type="submit" />
+    </form>
   </body>
 </html>

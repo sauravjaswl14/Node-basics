@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My website</title>
+    <title>Contact Page</title>
     <style>
       body {
         background-color: skyblue;
@@ -22,10 +22,20 @@
         text-align: center;
         font-size: 18px;
       }
+      form {
+        margin: auto;
+      }
+      form input {
+        width: 200px;
+      }
     </style>
   </head>
   <body>
+    <%-include('partials/nav');%>
     <h1>Contact Us</h1>
-    <p>contact us for the coolest cats</p>
+    <p>Sucessfully submitted!</p>
+    <p>
+      You have contacted <%= data.who%> of <%= data.department %> department.
+    </p>
   </body>
 </html>
